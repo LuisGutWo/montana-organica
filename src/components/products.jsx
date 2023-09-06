@@ -1,137 +1,91 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Image from 'react-bootstrap/Image';
-
-import TeamImg1 from "../assets/images/team1.jpg";
-import TeamImg2 from "../assets/images/team2.jpg";
-import TeamImg3 from "../assets/images/team3.jpg";
-import TeamImg4 from "../assets/images/team4.jpg";
-import TeamImg5 from "../assets/images/team5.jpg";
-import TeamImg6 from "../assets/images/team6.jpg";
-import TeamImg7 from "../assets/images/team7.jpg";
-import TeamImg8 from "../assets/images/team8.jpg";
-
-const productsData = [
-  {
-    id: 1,
-    image: TeamImg1,
-    fbLink: 'https://www.facebook.com',
-    twitterLink: 'https://www.twitter.com',
-    linkedinLink: 'https://www.linkedin.com',
-    name: 'Gabriel Hart',
-    designation: 'CEO',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.'
-  },
-  {
-    id: 2,
-    image: TeamImg2,
-    fbLink: 'https://www.facebook.com',
-    twitterLink: 'https://www.twitter.com',
-    linkedinLink: 'https://www.linkedin.com',
-    name: 'David Antony',
-    designation: 'Manager',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.'
-  },
-  {
-    id: 3,
-    image: TeamImg3,
-    fbLink: 'https://www.facebook.com',
-    twitterLink: 'https://www.twitter.com',
-    linkedinLink: 'https://www.linkedin.com',
-    name: 'Nicholas Perry',
-    designation: 'UX Designer',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.'
-  },
-  {
-    id: 4,
-    image: TeamImg4,
-    fbLink: 'https://www.facebook.com',
-    twitterLink: 'https://www.twitter.com',
-    linkedinLink: 'https://www.linkedin.com',
-    name: 'Sarah Wills',
-    designation: 'Developer',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.'
-  },
-  {
-    id: 5,
-    image: TeamImg5,
-    fbLink: 'https://www.facebook.com',
-    twitterLink: 'https://www.twitter.com',
-    linkedinLink: 'https://www.linkedin.com',
-    name: 'Sophia Pitt',
-    designation: 'Developer',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.'
-  },
-  {
-    id: 6,
-    image: TeamImg6,
-    fbLink: 'https://www.facebook.com',
-    twitterLink: 'https://www.twitter.com',
-    linkedinLink: 'https://www.linkedin.com',
-    name: 'Taylor Lopez',
-    designation: 'Developer',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.'
-  },
-  {
-    id: 7,
-    image: TeamImg7,
-    fbLink: 'https://www.facebook.com',
-    twitterLink: 'https://www.twitter.com',
-    linkedinLink: 'https://www.linkedin.com',
-    name: 'Ryan Giggs',
-    designation: 'Content Writer',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.'
-  },
-  {
-    id: 8,
-    image: TeamImg8,
-    fbLink: 'https://www.facebook.com',
-    twitterLink: 'https://www.twitter.com',
-    linkedinLink: 'https://www.linkedin.com',
-    name: 'David Smith',
-    designation: 'SEO Expert',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.'
-  }
-]
+import React from "react";
+import { useState, useEffect } from "react";
+import { NavLink, Navbar, Row, Col } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Loader from "react-loaders";
+import MainProductCard from "./MainProductCard";
 
 function AppProducts() {
+  const [data, setData] = useState([]);
+  const [search, setSearch] = useState("");
+  const [categories, setCategories] = useState([]);
+  const [types, setTypes] = useState([]);
+  const [filter, setFilter] = useState("all");
+
+  useEffect(() => {
+    <Loader type="pacman" />;
+    fetch(import.meta.env.VITE_URL)
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setData(data);
+        setCategories(["all", ...new Set(data.map((item) => item.category))]);
+        setTypes([...new Set(data.map((item) => item.type))]);
+      });
+  }, []);
+
+  const searchData = (item, search) => {
+    return item.name.toLowerCase().includes(search.toLowerCase());
+  };
+
+  const filteredData = () => {
+    if (filter === "all") {
+      return data.filter((item) => searchData(item, search));
+    } else {
+      return data
+        .filter((item) => item.category === filter || item.type === filter)
+        .filter((item) => searchData(item, search));
+    }
+  };
+
+  const filteredProduct = filteredData().map((item) => (
+    <MainProductCard key={item.id} item={item} />
+  ));
+
   return (
-    <section id="products" className="block teams-block">
-      <Container fluid>
-        <div className="title-holder">
-          <h2>Nuestros Productos</h2>
-          <div className="subtitle">conoce lo mejor de la naturaleza</div>
-        </div>
-        <Row>
-          {
-            productsData.map(teams => {
-              return (
-                <Col sm={3} key={teams.id}>
-                  <div className='image'>
-                    <Image src={teams.image} />
-                    <div className='overlay'>
-                      <div className='socials'>
-                        <ul>
-                          <li><a href={teams.fbLink}><i className="fab fa-facebook-f"></i></a></li>
-                          <li><a href={teams.twitterLink}><i className="fab fa-twitter"></i></a></li>
-                          <li><a href={teams.linkedinLink}><i className="fab fa-linkedin-in"></i></a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='content'>
-                    <h3>{teams.name}</h3>
-                    <span className='designation'>{teams.designation}</span>
-                    <p>{teams.description}</p>
-                  </div>
-                </Col>
-              );
-            })
-          }
-        </Row>
-      </Container>
-    </section>
+    <>
+      <section id="products" className="block teams-block">
+        <Container fluid>
+          <div className="title-holder">
+            <h2>Nuestros Productos</h2>
+            <div className="subtitle">conoce lo mejor de la naturaleza</div>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Buscar producto"
+              onChange={(e) => setSearch(e.target.value)}
+            />
+          </div>
+
+          <Navbar>
+            {categories.map((category) => (
+              <NavLink
+                key={category}
+                to={`/categories/${category}`}
+                onClick={() => setFilter(category)}
+                className="btn btn-primary"
+                style={{ alignItems: "center" }}
+              >
+                {category}
+              </NavLink>
+            ))}
+            {types.map((type) => (
+              <NavLink
+                key={type}
+                to={`/types/${type}`}
+                onClick={() => setFilter(type)}
+                className="btn btn-primary"
+                style={{ alignItems: "center" }}
+              >
+                {type}
+              </NavLink>
+            ))}
+          </Navbar>
+          {filteredProduct}
+        </Container>
+      </section>
+    </>
   );
 }
 
