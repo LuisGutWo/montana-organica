@@ -1,16 +1,17 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import { formatPrice } from "./formatPrice";
 
 export default function MainProductCard({ item }) {
   return (
-    <Card>
-      <Card.Img variant="top" src={item.img}/>
+    <Card className="main-product-card">
+      <Card.Img variant="top" src={item.img} className="card-image" />
 
       <Card.Body>
-        <Card.Title>{item.name}</Card.Title>
+        <Card.Title className="card-title">{item.name}</Card.Title>
         <Card.Text>
-          <p>${item.desc} </p>
-          <b>${item.price}</b>
+          <p>{item.desc} </p>
+          <b>{formatPrice(item.price)}</b>
         </Card.Text>
       </Card.Body>
     </Card>

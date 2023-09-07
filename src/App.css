@@ -1,5 +1,5 @@
 @import "animate.css";
-@import "../node_modules/loaders.css/src/animations/pacman.scss";
+@import "loaders.css/src/animations/pacman.scss";
 
 html {
   box-sizing: border-box;
@@ -106,6 +106,7 @@ ul,
 .loader-active {
   display: block;
   position: absolute;
+  color: #009b73;
   left: 0;
   right: 0;
   margin: auto;
@@ -152,7 +153,7 @@ ul,
 }
 
 .content-block ul li a:hover {
-  color: #f64b4b;
+  color: #009b73;
 }
 
 .btn.btn-primary {
@@ -186,7 +187,7 @@ input[type="search"],
 textarea {
   background: #fff;
   border: 1px solid #cccccc;
-  margin: 0;
+  margin: 1em 0;
   padding: 5px 15px;
   width: 100%;
   height: 47px;
@@ -305,7 +306,7 @@ textarea {
   width: 35px;
   height: 35px;
   background: #fff;
-  color: #f64b4b;
+  color: #009b73;
   border-radius: 50%;
   display: block;
   text-align: center;
@@ -334,7 +335,7 @@ textarea {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #f64b4b;
+  background: #0b4d3c;
   border-radius: 3px;
   color: #fff;
   border: 0;
@@ -356,30 +357,7 @@ textarea {
 }
 
 .go-top:hover {
-  background: #f41a1a;
-}
-
-.pagination > li.active a {
-  background: #f64b4b;
-  border-color: #f64b4b;
-}
-
-.pagination > li.active a:hover {
-  background: #f64b4b;
-  border-color: #f64b4b;
-}
-
-.pagination > li > a {
-  color: #f64b4b;
-  transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
-  padding: 6px 15px 12px;
-}
-
-.pagination > li > a:hover {
-  background: #f64b4b;
-  color: #fff;
-  border-color: #f64b4b;
+  background: #009b73;
 }
 
 .pagetitle {
@@ -404,7 +382,7 @@ textarea {
   right: 0;
   top: 0;
   z-index: 9999;
-  background: #e6e6e6;
+  background: #f2f2f2;
   box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.1);
   transition: all 0.5s linear;
 }
@@ -441,7 +419,7 @@ textarea {
 #header .navbar-collapse a:hover,
 #header .navbar-collapse a.active {
   background: none;
-  color: #f64b4b;
+  color: #009b73;
 }
 
 #header .navbar-collapse a:hover:before,
@@ -453,7 +431,7 @@ textarea {
 
 #header .navbar-collapse a:before {
   content: "";
-  background: #f64b4b;
+  background: #009b73;
   height: 1px;
   position: absolute;
   bottom: 7px;
@@ -465,7 +443,7 @@ textarea {
 }
 
 #footer {
-  background: #f64b4b;
+  background: #009b73;
   padding: 50px 0;
   color: #fff;
   text-align: center;
@@ -476,7 +454,7 @@ textarea {
 }
 
 #footer .socials a:hover {
-  background: #f53333;
+  background: #067257;
 }
 
 .block {
@@ -513,20 +491,32 @@ textarea {
   margin: 0 0 30px;
 }
 
-.about-block .progress-block {
-  margin: 0 0 25px;
+/* Main product card */
+.main-product-card {
+  margin: 1em;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
+    rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  border: none !important;
 }
+.card-image {
+  width: 50%;
+  object-fit: scale-down;
+  object-position: center;
+  filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.422));
+  margin: 1.5em 0 1em 5em;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 
-.about-block .progress-block h4 {
-  text-transform: uppercase;
-  margin: 0 0 5px;
-  font-size: 16px;
+  &:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
-
-.about-block .progress-bar {
-  background-color: #f64b4b;
-  -webkit-transition: width 0.3s linear;
-  transition: width 0.3s linear;
+.card-title {
+  color: #c9733a;
+  font-size: 1.4em;
 }
 
 .stores-block .storeslist > div {
@@ -592,6 +582,8 @@ textarea {
   font-size: 100%;
 }
 
+/* Products section */
+
 .teams-block div[class*="col"] {
   margin: 0 0 50px;
 }
@@ -604,40 +596,57 @@ textarea {
   top: 0;
   opacity: 1;
 }
+.products-buttons-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  padding: 1rem;
 
-.teams-block .image {
-  margin: 0 0 20px;
-  position: relative;
-  overflow: hidden;
+  .category-buttons {
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: fit-content;
+    text-transform: uppercase;
+
+    width: 20%;
+    height: 3em;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #009b73;
+    color: #fff;
+    box-shadow: 1px 1px 3px 1px rgba(65, 65, 65, 0.361);
+    border-radius: 5px;
+
+    &:hover {
+      color: #fff;
+      background-color: #0b4d3c;
+      border-radius: 10px;
+    }
+  }
+}
+.products-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+
+  .products-column {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 18vw;
+  }
 }
 
-.teams-block .image img {
-  width: 100%;
-  height: auto;
-}
-
-.teams-block .image .overlay {
-  position: absolute;
-  top: 50%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transition: all 0.3s linear;
-  -webkit-transition: all 0.2s linear;
-  vertical-align: middle;
-  background: rgba(246, 75, 75, 0.9);
-  opacity: 0;
-}
-
-.teams-block h3 {
-  margin: 0 0 5px;
-}
-
-.teams-block .designation {
-  display: block;
-  font-style: italic;
-  margin: 0 0 20px;
-}
+/* Testimonials section */
 
 .testimonials-block {
   padding: 90px 0 70px;
@@ -871,6 +880,7 @@ textarea {
 
 .contact-block {
   position: relative;
+  background-color: #009b742f;
 }
 
 .contact-block .row {
@@ -913,7 +923,7 @@ textarea {
   display: block;
   font-size: 40px;
   margin: 0 0 15px;
-  color: #f64b4b;
+  color: #009b73;
 }
 
 @media only screen and (min-width: 1025px) {

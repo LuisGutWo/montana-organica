@@ -9,28 +9,28 @@ function AppContact() {
     <section id="contact" className="block contact-block">
       <Container fluid>
         <div className="title-holder">
-          <h2>Contact us</h2>
-          <div className="subtitle">get connected with us</div>
+          <h2>Contáctenos</h2>
+          <div className="subtitle">estamos siempre conectados</div>
         </div>
         <Form className='contact-form'>
           <Row>
             <Col sm={4}>
-              <Form.Control type="text" placeholder="Enter your full name" required />
+              <Form.Control type="text" placeholder="Nombre completo" required />
             </Col>
             <Col sm={4}>
-              <Form.Control type="email" placeholder="Enter your email address" required />
+              <Form.Control type="email" placeholder="Email" required />
             </Col>
             <Col sm={4}>
-              <Form.Control type="tel" placeholder="Enter your contact number" required />
+              <Form.Control type="tel" placeholder="Numero de teléfono" required />
             </Col>
           </Row>
           <Row>
             <Col sm={12}>
-              <Form.Control as="textarea" placeholder="Enter your contact message" required />
+              <Form.Control as="textarea" placeholder="Mensaje" required />
             </Col>
           </Row>
           <div className='btn-holder'>
-            <Button type="submit">Submit</Button>
+            <Button type="submit">Enviar</Button>
           </div>
         </Form>
       </Container>
@@ -50,7 +50,7 @@ function AppContact() {
             </li>
             <li>
               <i className="fas fa-map-marker-alt"></i>
-              London, United Kingdom
+              Lima, Peru
             </li>
           </ul>
         </div>

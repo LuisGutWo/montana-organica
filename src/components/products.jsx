@@ -4,16 +4,15 @@ import { NavLink, Navbar, Row, Col } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Loader from "react-loaders";
 import MainProductCard from "./MainProductCard";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 function AppProducts() {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
   const [categories, setCategories] = useState([]);
-  const [types, setTypes] = useState([]);
   const [filter, setFilter] = useState("all");
 
   useEffect(() => {
-    <Loader type="pacman" />;
     fetch(import.meta.env.VITE_URL)
       .then((res) => {
         return res.json();
@@ -21,7 +20,6 @@ function AppProducts() {
       .then((data) => {
         setData(data);
         setCategories(["all", ...new Set(data.map((item) => item.category))]);
-        setTypes([...new Set(data.map((item) => item.type))]);
       });
   }, []);
 
@@ -34,7 +32,7 @@ function AppProducts() {
       return data.filter((item) => searchData(item, search));
     } else {
       return data
-        .filter((item) => item.category === filter || item.type === filter)
+        .filter((item) => item.category === filter)
         .filter((item) => searchData(item, search));
     }
   };
@@ -52,39 +50,34 @@ function AppProducts() {
             <div className="subtitle">conoce lo mejor de la naturaleza</div>
             <input
               type="text"
-              className="form-control"
+              className="form-control products-search"
               placeholder="Buscar producto"
               onChange={(e) => setSearch(e.target.value)}
             />
           </div>
 
-          <Navbar>
+          <Navbar className="products-buttons-section">
             {categories.map((category) => (
               <NavLink
                 key={category}
                 to={`/categories/${category}`}
                 onClick={() => setFilter(category)}
-                className="btn btn-primary"
-                style={{ alignItems: "center" }}
+                className="category-buttons"
               >
                 {category}
               </NavLink>
             ))}
-            {types.map((type) => (
-              <NavLink
-                key={type}
-                to={`/types/${type}`}
-                onClick={() => setFilter(type)}
-                className="btn btn-primary"
-                style={{ alignItems: "center" }}
-              >
-                {type}
-              </NavLink>
-            ))}
           </Navbar>
-          {filteredProduct}
+        </Container>
+        <Container>
+          <ResponsiveMasonry
+            columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+          >
+            <Masonry>{filteredProduct}</Masonry>
+          </ResponsiveMasonry>
         </Container>
       </section>
+      <Loader type="pacman" />;
     </>
   );
 }
