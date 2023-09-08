@@ -11,7 +11,7 @@ export default function MainProductCard({ item }) {
         <Card.Title className="card-title">{item.name}</Card.Title>
         <Card.Text>
           <p>{item.desc} </p>
-          <b>{formatPrice(item.price)}</b>
+          <b className="card-price">{formatPrice(item.price)}</b>
         </Card.Text>
       </Card.Body>
     </Card>

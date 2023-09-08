@@ -1,73 +1,76 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
 
-import BlogImg1 from "../assets/images/blog1.jpg"
-import BlogImg2 from "../assets/images/blog2.jpg"
-import BlogImg3 from "../assets/images/blog3.jpg"
+import BlogImg1 from "../assets/images/blogImg1.jpg";
+import BlogImg2 from "../assets/images/blogImg2.png";
+import BlogImg3 from "../assets/images/blogImg3.jpg";
 
 const blogData = [
   {
     id: 1,
     image: BlogImg1,
-    time: '15 Nov 2016',
-    title: 'Coffee Lovers',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, asperiores eaque quibusdam eum quod cum nesciunt.',
-    link: 'https://www.google.com'
+    time: "Jun 6, 2023 | Nutrición y Salud",
+    title:
+      "Alimentos sanos indispensables para improvisar recetas fáciles y sanas",
+    description:
+      "Para hacer cenas rápidas y sanas y comidas saludables y rápidas ¿qué alimentos sanos no pueden faltar en tu menú semanal saludable?",
+    link: "http://blancadieznutricionista.com/alimentos-sanos-indispensables-para-improvisar-recetas-faciles-y-sanas/",
   },
   {
     id: 2,
     image: BlogImg2,
-    time: '10 Nov 2016',
-    title: 'Tips for UI Design',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, asperiores eaque quibusdam eum quod cum nesciunt.',
-    link: 'https://www.facebook.com'
+    time: "10 Nov 2016",
+    title:
+      "Blog: Hacia sistemas alimentarios más saludables, sostenibles y equitativos en el Perú",
+    description:
+      "El plazo para el cumplimiento de la Agenda 2030 y sus 17 Objetivos de Desarrollo Sostenible (ODS) se está aproximando y resulta crítico cambiar nuestros sistemas alimentarios de forma integral.",
+    link: "https://peru.un.org/es/146232-blog-hacia-sistemas-alimentarios-m%C3%A1s-saludables-sostenibles-y-equitativos-en-el-per%C3%BA",
   },
   {
     id: 3,
     image: BlogImg3,
-    time: '07 Nov 2016',
-    title: 'Beautiful Day',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, asperiores eaque quibusdam eum quod cum nesciunt.',
-    link: 'https://www.twitter.com'
-  }
-]
+    time: "07 Nov 2016",
+    title: "¿Por qué promover la alimentación saludable en el Perú?",
+    description:
+      "El Perú es reconocido en el mundo por la calidad de su gastronomía y por una amplia agrobiodiversidad. Pero, esto no se traduce en un mayor acceso de la población a una alimentación saludable.",
+    link: "https://especial.elcomercio.pe/perusostenible/por-que-promover-la-alimentacion-saludable-en-el-peru/",
+  },
+];
 
 function AppBlog() {
   return (
     <section id="blog" className="block blog-block">
       <Container fluid>
         <div className="title-holder">
-          <h2>Latest from blog</h2>
-          <div className="subtitle">get our latest news from blog</div>
+          <h2>Blogs de la semana</h2>
+          <div className="subtitle">un poco de nuestra seleccion de blogs orientados al bienestar y buena alimentación</div>
         </div>
         <Row>
-          {
-            blogData.map(blog => {
-              return (
-                <Col sm={4} key={blog.id}>
-                  <div className='holder'>
-                    <Card>
-                      <Card.Img variant="top" src={blog.image} />
-                      <Card.Body>
-                        <time>{blog.time}</time>
-                        <Card.Title>{blog.title}</Card.Title>
-                        <Card.Text>
-                          {blog.description}
-                        </Card.Text>
-                        <a href={blog.link} className="btn btn-primary">Read More <i className="fas fa-chevron-right"></i></a>
-                      </Card.Body>
-                    </Card>
-                  </div>
-                </Col>
-              )
-            })
-          }
+          {blogData.map((blog) => {
+            return (
+              <Col sm={4} key={blog.id}>
+                <div className="holder">
+                  <Card>
+                    <Card.Img variant="top" src={blog.image} />
+                    <Card.Body>
+                      <time>{blog.time}</time>
+                      <Card.Title>{blog.title}</Card.Title>
+                      <Card.Text>{blog.description}</Card.Text>
+                      <a href={blog.link} className="btn blog-button">
+                        Leer mas <i className="fas fa-chevron-right"></i>
+                      </a>
+                    </Card.Body>
+                  </Card>
+                </div>
+              </Col>
+            );
+          })}
         </Row>
       </Container>
     </section>
-  )
+  );
 }
 
 export default AppBlog;

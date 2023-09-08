@@ -1,13 +1,21 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import "animate.css";
 
-function AppHeader() {
+function AppHeader() { 
+
   return (
     <Navbar bg="light" expand="lg">
       <Container>
         <Navbar.Brand href="#home">
-          <img src="src/assets/images/montaña_organica_logo.png" alt="" className='navbar-brand-image'/>
+          <Nav.Link href="#home">
+            <img
+              src="src/assets/images/montaña_organica_logo.png"
+              alt=""
+              className="navbar-brand-image animate__animated animate__pulse animate__delay-2s animate__infinite	animate__slower"
+            />
+          </Nav.Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

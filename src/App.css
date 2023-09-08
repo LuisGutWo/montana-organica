@@ -1,5 +1,6 @@
 @import "animate.css";
 @import "loaders.css/src/animations/pacman.scss";
+@import "transition-style";
 
 html {
   box-sizing: border-box;
@@ -335,9 +336,9 @@ textarea {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #0b4d3c;
+  background: #eb783e;
   border-radius: 3px;
-  color: #fff;
+  color: #000000;
   border: 0;
 }
 
@@ -357,7 +358,7 @@ textarea {
 }
 
 .go-top:hover {
-  background: #009b73;
+  background: #933b04;
 }
 
 .pagetitle {
@@ -377,7 +378,7 @@ textarea {
 
 #header {
   padding: 15px 0;
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   right: 0;
   top: 0;
@@ -385,6 +386,13 @@ textarea {
   background: #f2f2f2;
   box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.1);
   transition: all 0.5s linear;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: ease-in-out 1s all;
+  transition-delay: 1s;
 }
 
 #header .navbar {
@@ -403,7 +411,7 @@ textarea {
 }
 
 #header .navbar-collapse .navbar-nav {
-  font-size: 1.2em;
+  font-size: 1.3em;
   line-height: 1.2em;
 }
 
@@ -463,7 +471,7 @@ textarea {
 }
 
 .hero-block {
-  margin: 7em 0 0;
+  margin: 0;
 }
 
 .hero-block .carousel-item:before {
@@ -515,8 +523,11 @@ textarea {
   }
 }
 .card-title {
-  color: #c9733a;
+  color: #cd7a43;
   font-size: 1.4em;
+}
+.card-price {
+  color: #19715bd2;
 }
 
 .stores-block .storeslist > div {
@@ -612,19 +623,19 @@ textarea {
     width: fit-content;
     text-transform: uppercase;
 
-    width: 20%;
-    height: 3em;
+    width: 7em;
+    height: 2.2em;
     font-size: 1em;
     font-weight: bold;
     background-color: #009b73;
     color: #fff;
     box-shadow: 1px 1px 3px 1px rgba(65, 65, 65, 0.361);
-    border-radius: 5px;
+    border-radius: 3px;
 
     &:hover {
       color: #fff;
       background-color: #0b4d3c;
-      border-radius: 10px;
+      border-radius: 5px;
     }
   }
 }
@@ -715,7 +726,7 @@ textarea {
 }
 
 .testimonials-block .carousel-indicators .active {
-  background: #f64b4b;
+  background: #009b73;
 }
 
 .pricing-block .row {
@@ -847,7 +858,7 @@ textarea {
 
 .blog-block .card-title {
   margin: 0 0 10px;
-  color: #f64b4b;
+  color: #009b73;
   font-size: 22px;
 }
 
@@ -876,6 +887,15 @@ textarea {
 
 .blog-block .meta .category a:hover {
   color: #f64b4b;
+}
+.blog-button {
+  background-color: #009b73;
+  color: #fff;
+  border: none !important ;
+  border-radius: 8px !important;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
 }
 
 .contact-block {

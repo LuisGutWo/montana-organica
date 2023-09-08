@@ -27,8 +27,8 @@ function AppTestimonials() {
     <section id="testimonials" className="testimonials-block">
       <Container fluid>
         <div className="title-holder">
-          <h2>Client testimonials</h2>
-          <div className="subtitle">what client says about us</div>
+          <h2>Nuestros clientes dicen...</h2>
+          <div className="subtitle">conoce lo que opinan de nosotros</div>
         </div>
         <Carousel controls={false}>
           {

@@ -2,15 +2,19 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { NavLink, Navbar, Row, Col } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
-import Loader from "react-loaders";
 import MainProductCard from "./MainProductCard";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 function AppProducts() {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
   const [categories, setCategories] = useState([]);
-  const [filter, setFilter] = useState("all");
+  const [filter, setFilter] = useState("todos");
 
   useEffect(() => {
     fetch(import.meta.env.VITE_URL)
@@ -19,7 +23,7 @@ function AppProducts() {
       })
       .then((data) => {
         setData(data);
-        setCategories(["all", ...new Set(data.map((item) => item.category))]);
+        setCategories(["todos", ...new Set(data.map((item) => item.category))]);
       });
   }, []);
 
@@ -28,7 +32,7 @@ function AppProducts() {
   };
 
   const filteredData = () => {
-    if (filter === "all") {
+    if (filter === "todos") {
       return data.filter((item) => searchData(item, search));
     } else {
       return data
@@ -77,7 +81,6 @@ function AppProducts() {
           </ResponsiveMasonry>
         </Container>
       </section>
-      <Loader type="pacman" />;
     </>
   );
 }

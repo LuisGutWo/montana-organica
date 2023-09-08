@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -10,16 +11,33 @@ import AppTestimonials from "./components/testimonials";
 import AppBlog from "./components/blog";
 import AppContact from "./components/contact";
 import AppFooter from "./components/footer";
+import "transition-style";
+import Loader from "react-loaders";
+
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 function App() {
+  const [sticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setSticky(window.scrollY > 400);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="App">
-      <header id="header">
+    <div className="App" transition-style="in:circle:bottom-right">
+      <header id="header" className={`${sticky ? "sticky" : ""}`}>
         <AppHeader />
       </header>
       <main>
         <AppHero />
-        <AppAbout />
+        <AppAbout data-aos="zoom-in" />
         <AppProducts />
         <AppStores />
         <AppTestimonials />
@@ -29,6 +47,7 @@ function App() {
       <footer id="footer">
         <AppFooter />
       </footer>
+      <Loader type="ball-triangle" active={true} color="#00BFFF" />
     </div>
   );
 }

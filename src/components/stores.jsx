@@ -22,94 +22,93 @@ import StoreImg15 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia.png";
 const storesData = [
   {
     id: 1,
-    link: "https://www.google.com",
+    link: "https://shop.thikathani.com.pe/",
     image: StoreImg1,
-    title: "Lonely Path",
+    title: "Thika Thani",
   },
   {
     id: 2,
-    link: "https://www.google.com",
+    link: "https://www.lasanahoria.com/",
     image: StoreImg2,
-    title: "Photographer Girl",
-    subtitle: "Branding",
+    subtitle: "La Zanahoria",
   },
   {
     id: 3,
-    link: "https://www.google.com",
+    link: "https://es.foursquare.com/v/la-colorada--bodega-org%C3%A1nica/550c9104498e2c17483d4f33",
     image: StoreImg3,
-    title: "The Difference",
+    title: "La Colorada",
   },
   {
     id: 4,
-    link: "https://www.google.com",
+    link: "https://www.florayfauna.pe/",
     image: StoreImg4,
-    title: "Nature Patterns",
+    title: "Flora y Fauna",
   },
   {
     id: 5,
-    link: "https://www.google.com",
+    link: "https://www.edenorganico.com/",
     image: StoreImg5,
-    title: "The Difference",
+    title: "Eden orgánico",
   },
   {
     id: 6,
-    link: "https://www.google.com",
+    link: "https://www.google.cl/search?q=botanica+bio+market&sca_esv=563600755&sxsrf=AB5stBiB4XZHNydkaobXzUfzmAz7aN5SGg%3A1694140526046&source=hp&ei=boj6ZN969ajk5Q-3rLeYAQ&iflsig=AD69kcEAAAAAZPqWfgyJAigXtlSwtpKi6a4Z-FDnlsWy&oq=&gs_lp=Egdnd3Mtd2l6IgAqAggBMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnMgcQIxjqAhgnSJoPUABYAHABeACQAQCYAQCgAQCqAQC4AQHIAQCoAgo&sclient=gws-wiz#ip=1&rlimm=17653006029466789401",
     image: StoreImg6,
-    title: "Winter Sonata",
+    title: "Botánica bio market",
   },
   {
     id: 7,
-    link: "https://www.google.com",
+    link: "https://biodeliorganico.pe/",
     image: StoreImg7,
-    title: "Lonely Path",
+    title: "BioDeli",
   },
   {
     id: 8,
-    link: "https://www.google.com",
+    link: "https://www.oxahaus.com/tienda-online/",
     image: StoreImg8,
-    title: "Appreciation",
+    title: "Oxahaus",
   },
   {
     id: 9,
-    link: "https://www.google.com",
+    link: "https://www.samacaorganico.pe/",
     image: StoreImg9,
-    title: "Happy Days",
+    title: "Sacama orgánico",
   },
   {
     id: 10,
-    link: "https://www.google.com",
+    link: "https://www.ecotienda.pe/",
     image: StoreImg10,
-    title: "Happy Days",
+    title: "Ecotienda",
   },
   {
     id: 11,
-    link: "https://www.google.com",
+    link: "https://www.labodegaorganica.com/password",
     image: StoreImg11,
-    title: "Happy Days",
+    title: "La bodega organica",
   },
   {
     id: 12,
-    link: "https://www.google.com",
+    link: "https://mapcarta.com/es/N5026684415",
     image: StoreImg12,
-    title: "Happy Days",
+    title: "Shanti",
   },
   {
     id: 13,
-    link: "https://www.google.com",
+    link: "https://web.facebook.com/puntogourmetperu/?_rdc=1&_rdr",
     image: StoreImg13,
-    title: "Happy Days",
+    title: "Punto Gourmet",
   },
   {
     id: 14,
-    link: "https://www.google.com",
+    link: "https://www.camposdevida.com/",
     image: StoreImg14,
-    title: "Happy Days",
+    title: "Campos de vida",
   },
   {
     id: 15,
-    link: "https://www.google.com",
+    link: "https://www.vacasfelices.com/tienda/",
     image: StoreImg15,
-    title: "Happy Days",
+    title: "Vacas Felices",
   },
 ];
 
@@ -124,9 +123,13 @@ function AppStores() {
         <Row className="storeslist">
           {storesData.map((stores) => {
             return (
-              <Col sm={4} key={stores.id}>
+              <Col sm={4} key={stores.id} className="p-4">
                 <div className="stores-wrapper">
-                  <a href={stores.link}>
+                  <a
+                    href={stores.link}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
                     <Image src={stores.image} />
                     <div className="label text-center">
                       <h3>{stores.title}</h3>
