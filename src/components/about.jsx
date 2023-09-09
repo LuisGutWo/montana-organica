@@ -4,6 +4,7 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 
 import img1 from "../assets/images/nosotros-1-1024x682.jpg";
+import img2 from "../assets/images/iconos_vegan_gluten_non.png";
 
 function AppAbout() {
   return (
@@ -31,7 +32,7 @@ function AppAbout() {
               mejor calidad de vida.
             </p>
             <br />
-            <img src="src/assets/images/iconos_vegan_gluten_non.png" alt="" />
+            <img src={img2} alt="" />
           </Col>
         </Row>
       </Container>

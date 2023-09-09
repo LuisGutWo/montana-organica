@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "animate.css";
+import NavbarLogo from "../assets/images/montaña_organica_logo.png" 
 
 function AppHeader() { 
 
@@ -11,7 +12,7 @@ function AppHeader() {
         <Navbar.Brand href="#home">
           <Nav.Link href="#home">
             <img
-              src="src/assets/images/montaña_organica_logo.png"
+              src={NavbarLogo}
               alt=""
               className="navbar-brand-image animate__animated animate__pulse animate__delay-2s animate__infinite	animate__slower"
             />
