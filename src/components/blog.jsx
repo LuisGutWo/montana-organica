@@ -7,6 +7,11 @@ import BlogImg1 from "../assets/images/blogImg1.jpg";
 import BlogImg2 from "../assets/images/blogImg2.png";
 import BlogImg3 from "../assets/images/blogImg3.jpg";
 
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
+
 const blogData = [
   {
     id: 1,
@@ -44,14 +49,23 @@ function AppBlog() {
     <section id="blog" className="block blog-block">
       <Container fluid>
         <div className="title-holder">
-          <h2>Blogs de la semana</h2>
-          <div className="subtitle">un poco de nuestra seleccion de blogs orientados al bienestar y buena alimentación</div>
+          <h2 data-aos="fade-right">Blogs de la semana</h2>
+          <div data-aos="fade-left" className="subtitle">
+            un poco de nuestra selección de blogs orientados al bienestar y
+            buena alimentación
+          </div>
         </div>
         <Row>
           {blogData.map((blog) => {
             return (
               <Col sm={4} key={blog.id}>
-                <div className="holder">
+                <div
+                  data-aos="zoom-in"
+                  data-aos-easing="ease-in-back"
+                  data-aos-delay="300"
+                  data-aos-offset="0"
+                  className="holder"
+                >
                   <Card>
                     <Card.Img variant="top" src={blog.image} />
                     <Card.Body>

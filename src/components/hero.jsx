@@ -1,6 +1,7 @@
 import Carousel from "react-bootstrap/Carousel";
 import ImgHero1 from "../assets/images/Banner-Rose-tea_Mesa-de-trabajo-1-copia.png";
 import ImgHero2 from "../assets/images/Banner-Rose-tea_Mesa-de-trabajo-1.png";
+import ImgHero3 from "../assets/images/Banner-rose-tea.png";
 
 var heroData = [
   {
@@ -11,6 +12,10 @@ var heroData = [
     id: 2,
     image: ImgHero2,
   },
+  {
+    id: 3,
+    image: ImgHero3,
+  }
 ];
 
 function AppHero() {

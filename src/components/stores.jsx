@@ -1,7 +1,11 @@
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+
+import { EffectCoverflow, Pagination } from "swiper/modules";
 
 import StoreImg1 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-2.png";
 import StoreImg2 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-3.png";
@@ -19,6 +23,11 @@ import StoreImg13 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-14.pn
 import StoreImg14 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-15.png";
 import StoreImg15 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia.png";
 
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
+
 const storesData = [
   {
     id: 1,
@@ -30,7 +39,7 @@ const storesData = [
     id: 2,
     link: "https://www.lasanahoria.com/",
     image: StoreImg2,
-    subtitle: "La Zanahoria",
+    title: "La Zanahoria",
   },
   {
     id: 3,
@@ -117,30 +126,48 @@ function AppStores() {
     <section id="stores" className="block stores-block">
       <Container fluid>
         <div className="title-holder">
-          <h2>Nos puedes encontrar en</h2>
-          <div className="subtitle">nuestros distribuidores</div>
+          <h2 data-aos="fade-right">encuentranos en</h2>
+          <div data-aos="fade-left" className="subtitle">
+            nuestros distribuidores
+          </div>
         </div>
-        <Row className="storeslist">
-          {storesData.map((stores) => {
-            return (
-              <Col sm={4} key={stores.id} className="p-4">
-                <div className="stores-wrapper">
-                  <a
-                    href={stores.link}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                  >
-                    <Image src={stores.image} />
-                    <div className="label text-center">
-                      <h3>{stores.title}</h3>
-                    </div>
-                  </a>
-                </div>
-              </Col>
-            );
-          })}
-        </Row>
       </Container>
+
+      <Swiper
+        data-aos="zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0"
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+        {storesData.map((stores) => {
+          return (
+            <SwiperSlide>
+              <div className="stores-wrapper">
+                <a href={stores.link} target="_blank" rel="noreferrer noopener">
+                  <Image src={stores.image} />
+                  <div className="label text-center">
+                    <div className="store-title">{stores.title}</div>
+                  </div>
+                </a>
+              </div>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </section>
   );
 }

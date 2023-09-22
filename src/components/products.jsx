@@ -50,8 +50,10 @@ function AppProducts() {
       <section id="products" className="block teams-block">
         <Container fluid>
           <div className="title-holder">
-            <h2>Nuestros Productos</h2>
-            <div className="subtitle">conoce lo mejor de la naturaleza</div>
+            <h2 data-aos="fade-right">Nuestros Productos</h2>
+            <div data-aos="fade-left" className="subtitle">
+              conoce lo mejor de la naturaleza
+            </div>
             <input
               type="text"
               className="form-control products-search"
@@ -63,6 +65,7 @@ function AppProducts() {
           <Navbar className="products-buttons-section">
             {categories.map((category) => (
               <NavLink
+                data-aos="zoom-in"
                 key={category}
                 to={`/categories/${category}`}
                 onClick={() => setFilter(category)}
