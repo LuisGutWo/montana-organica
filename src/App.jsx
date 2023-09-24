@@ -13,10 +13,10 @@ import AppContact from "./components/contact";
 import AppFooter from "./components/footer";
 import "transition-style";
 import Loader from "react-loaders";
+import HeaderOne from "./components/headerOne";
 
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
 AOS.init();
 
 function App() {
@@ -31,13 +31,14 @@ function App() {
   }, []);
 
   return (
-    <div className="App" transition-style="in:circle:bottom-right">
+    <div className="App">
       <header id="header" className={`${sticky ? "sticky" : ""}`}>
+        <HeaderOne />
         <AppHeader />
       </header>
       <main>
         <AppHero />
-        <AppAbout data-aos="zoom-in" />
+        <AppAbout />
         <AppProducts />
         <AppStores />
         <AppTestimonials />

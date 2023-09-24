@@ -48,9 +48,9 @@ function AppContact() {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.8888819422887!2d-76.79972422559607!3d-11.98219004070044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105e84b7ff951ab%3A0x46087a59aaeb0092!2sUrbanizaci%C3%B3n%20El%20Cuadro!5e0!3m2!1ses-419!2scl!4v1694141661777!5m2!1ses-419!2scl"
           width="600"
           height="450"
-          allowfullscreen=""
+          allowFullScreen=""
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
       <Container fluid>

@@ -1,13 +1,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { NavLink, Navbar, Row, Col } from "react-bootstrap";
+import { NavLink, Navbar } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import MainProductCard from "./MainProductCard";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
 AOS.init();
 
 function AppProducts() {
@@ -75,8 +74,6 @@ function AppProducts() {
               </NavLink>
             ))}
           </Navbar>
-        </Container>
-        <Container>
           <ResponsiveMasonry
             columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
           >

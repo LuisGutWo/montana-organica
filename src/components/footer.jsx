@@ -33,12 +33,12 @@ function AppFooter() {
             </li>
             <li>
               <a href="https://www.twitter.com">
-                <i class="fab fa-instagram"></i>
+                <i className="fab fa-instagram"></i>
               </a>
             </li>
             <li>
               <a href="https://www.linkedin.com">
-                <i class="fab fa-whatsapp"></i>
+                <i className="fab fa-whatsapp"></i>
               </a>
             </li>
           </ul>
