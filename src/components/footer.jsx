@@ -23,8 +23,21 @@ function AppFooter() {
 
   return (
     <>
-      <Container fluid>
-        <div className="socials">
+      <section className="footer-one">
+        <div
+          className="footer-one__bg"
+          style={{
+            backgroundImage:
+              "url(src/assets/images/shapes/footer-v1-shape3.png)",
+          }}
+        ></div>
+        <div className="shape1 float-bob-y">
+          <img src={"src/assets/images/shapes/footer-v1-shape1.png"} alt="#" />
+        </div>
+        <div className="shape2 float-bob-y">
+          <img src={"src/assets/images/shapes/footer-v1-shape2.png"} alt="#" />
+        </div>
+        {/* <div className="socials">
           <ul>
             <li>
               <a href="https://www.facebook.com">
@@ -42,15 +55,15 @@ function AppFooter() {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
         {showTopBtn && <div className="go-top" onClick={goTop}></div>}
-      </Container>
+      </section>
 
-      <section fluid className="copyright-container">
+      {/* <section fluid className="copyright-container">
         <div className="copyright">
           &copy; 2023 LAW-webmedia. All Right Reserved.
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

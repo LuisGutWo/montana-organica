@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { NavLink, Navbar } from "react-bootstrap";
+import { Button, NavLink, Navbar } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import MainProductCard from "./MainProductCard";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
@@ -68,9 +68,8 @@ function AppProducts() {
                 key={category}
                 to={`/categories/${category}`}
                 onClick={() => setFilter(category)}
-                className="category-buttons"
               >
-                {category}
+                <Button>{category}</Button>
               </NavLink>
             ))}
           </Navbar>

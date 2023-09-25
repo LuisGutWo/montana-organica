@@ -3,8 +3,7 @@ import Card from "react-bootstrap/Card";
 import { formatPrice } from "./formatPrice";
 
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
 AOS.init();
 
 export default function MainProductCard({ item }) {
@@ -14,8 +13,8 @@ export default function MainProductCard({ item }) {
 
       <Card.Body>
         <Card.Title className="card-title">{item.name}</Card.Title>
+        <Card.Text>{item.desc}</Card.Text>
         <Card.Text>
-          <p>{item.desc} </p>
           <b className="card-price">{formatPrice(item.price)}</b>
         </Card.Text>
       </Card.Body>

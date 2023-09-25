@@ -14,6 +14,7 @@ import AppFooter from "./components/footer";
 import "transition-style";
 import Loader from "react-loaders";
 import HeaderOne from "./components/headerOne";
+import WOW from "wowjs";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -26,14 +27,21 @@ function App() {
     const handleScroll = () => {
       setSticky(window.scrollY > 400);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    new WOW.WOW({
+      live: false,
+    }).init();
+  }, []);
+
   return (
     <div className="App">
+      <HeaderOne />
       <header id="header" className={`${sticky ? "sticky" : ""}`}>
-        <HeaderOne />
         <AppHeader />
       </header>
       <main>
@@ -44,11 +52,11 @@ function App() {
         <AppTestimonials />
         <AppBlog />
         <AppContact />
+        <Loader type="ball-triangle" active={true} color="#00BFFF" />
       </main>
       <footer id="footer">
         <AppFooter />
       </footer>
-      <Loader type="ball-triangle" active={true} color="#00BFFF" />
     </div>
   );
 }

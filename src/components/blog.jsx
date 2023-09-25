@@ -9,6 +9,7 @@ import BlogImg3 from "../assets/images/blogImg3.jpg";
 
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import { Button } from "react-bootstrap";
 // ..
 AOS.init();
 
@@ -72,9 +73,9 @@ function AppBlog() {
                       <time>{blog.time}</time>
                       <Card.Title>{blog.title}</Card.Title>
                       <Card.Text>{blog.description}</Card.Text>
-                      <a href={blog.link} className="btn blog-button">
+                      <Button href={blog.link}>
                         Leer mas <i className="fas fa-chevron-right"></i>
-                      </a>
+                      </Button>
                     </Card.Body>
                   </Card>
                 </div>

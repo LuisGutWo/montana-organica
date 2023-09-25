@@ -24,8 +24,7 @@ import StoreImg14 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-15.pn
 import StoreImg15 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia.png";
 
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
 AOS.init();
 
 const storesData = [
@@ -144,9 +143,9 @@ const StoresSwipeCarousel = () => {
       modules={[EffectCoverflow, Pagination]}
       className="mySwiper"
     >
-      {storesData.map((stores) => {
+      {storesData.map((stores, index) => {
         return (
-          <SwiperSlide>
+          <SwiperSlide key={index}>
             <div className="stores-wrapper">
               <a href={stores.link} target="_blank" rel="noreferrer noopener">
                 <Image src={stores.image} />
