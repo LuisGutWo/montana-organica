@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+// import WOW from "wowjs";
 
 import AppHeader from "./components/header";
 import AppHero from "./components/hero";
@@ -14,7 +15,6 @@ import AppFooter from "./components/footer";
 import "transition-style";
 import Loader from "react-loaders";
 import HeaderOne from "./components/headerOne";
-import WOW from "wowjs";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -32,11 +32,11 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    new WOW.WOW({
-      live: false,
-    }).init();
-  }, []);
+  // useEffect(() => {
+  //   new WOW.WOW ({
+  //     live: false,
+  //   }).init();
+  // }, []);
 
   return (
     <div className="App">
@@ -52,11 +52,11 @@ function App() {
         <AppTestimonials />
         <AppBlog />
         <AppContact />
-        <Loader type="ball-triangle" active={true} color="#00BFFF" />
       </main>
       <footer id="footer">
         <AppFooter />
       </footer>
+      <Loader type="ball-triangle" active={true} color="#00BFFF" />
     </div>
   );
 }

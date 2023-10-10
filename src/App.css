@@ -304,14 +304,14 @@ textarea {
 }
 
 #header .navbar {
-  padding: 0;
+  padding-right: 4rem;
   justify-content: space-between;
   background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }
 
 #header .navbar-brand-image {
-  padding: 0;
-  height: 5em;
+  padding-left: 3rem;
+  height: 7rem;
 }
 
 #header .navbar-collapse {
@@ -319,8 +319,10 @@ textarea {
 }
 
 #header .navbar-collapse .navbar-nav {
-  font-size: 1.3em;
+  font-size: 1.2em;
   line-height: 1.2em;
+  text-transform: uppercase;
+  
 }
 
 #header .navbar-collapse a:last-child {
@@ -362,6 +364,7 @@ textarea {
 .main-header-one__top {
   position: relative;
   overflow: hidden;
+  width: 100%;
   display: block;
   background-image: linear-gradient(120deg, #009b73 0%, #007a5b 100%);
   padding: 0.1rem;
@@ -369,7 +372,6 @@ textarea {
 }
 
 .main-header-one__top .auto-container {
-  max-width: 1810px;
   width: 100%;
 }
 
