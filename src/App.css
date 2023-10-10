@@ -287,13 +287,11 @@ textarea {
 
 #header {
   padding: 0;
-  /* position: fixed; */
   width: 100vw;
   left: 0;
   right: 0;
   top: 0;
   z-index: 9999;
-  background: #f2f2f2;
   box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.1);
   transition: all 3s linear;
 }
@@ -380,7 +378,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 100vw;
+  width: 100%;
 }
 
 .main-header-one__top-left {
@@ -752,7 +750,7 @@ textarea {
   }
 }
 .card-title {
-  color: #cd7a43;
+  color: #b56b3a;
   font-size: 1.4em;
 }
 .card-price {
