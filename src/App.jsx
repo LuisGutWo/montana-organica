@@ -3,7 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 // import WOW from "wowjs";
 
-import AppHeader from "./components/header";
+import AppHeader from "./components/header/header";
+import HeaderOne from "./components/header/headerOne";
 import AppHero from "./components/hero";
 import AppAbout from "./components/about";
 import AppStores from "./components/stores";
@@ -14,7 +15,6 @@ import AppContact from "./components/contact";
 import AppFooter from "./components/footer";
 import "transition-style";
 import Loader from "react-loaders";
-import HeaderOne from "./components/headerOne";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -31,12 +31,6 @@ function App() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // useEffect(() => {
-  //   new WOW.WOW ({
-  //     live: false,
-  //   }).init();
-  // }, []);
 
   return (
     <div className="App">

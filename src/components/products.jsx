@@ -74,7 +74,7 @@ function AppProducts() {
             ))}
           </Navbar>
           <ResponsiveMasonry
-            columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+            columnsCountBreakPoints={{ 350: 2, 750: 2, 900: 3 }}
           >
             <Masonry>{filteredProduct}</Masonry>
           </ResponsiveMasonry>

@@ -1,9 +1,11 @@
 import React from "react";
+import "../header/headerStyles.css"
+import { Container } from "react-bootstrap";
 
 const HeaderOne = () => {
   return (
     <section className="main-header-one__top">
-      <div className="auto-container">
+      <Container className="auto-container">
         <div className="main-header-one__top-inner">
           <div className="main-header-one__top-left">
             <ul className="main-header__contact-info">
@@ -55,7 +57,7 @@ const HeaderOne = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

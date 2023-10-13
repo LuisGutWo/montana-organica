@@ -7,8 +7,7 @@ import img1 from "../assets/images/nosotros-1-1024x682.jpg";
 import img2 from "../assets/images/iconos_vegan_gluten_non.png";
 
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
 AOS.init();
 
 function AppAbout() {
@@ -21,7 +20,12 @@ function AppAbout() {
         </div>
         <Row>
           <Col sm={6}>
-            <Image data-aos="fade-right" src={img1} />
+            <Image
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              src={img1}
+            />
           </Col>
           <Col sm={6}>
             <p>
@@ -37,7 +41,13 @@ function AppAbout() {
               mejor calidad de vida.
             </p>
             <br />
-            <img data-aos="fade-left" src={img2} alt="" />
+            <img
+              data-aos="fade-left"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              src={img2}
+              alt=""
+            />
           </Col>
         </Row>
       </Container>

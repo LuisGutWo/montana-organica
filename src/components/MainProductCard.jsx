@@ -13,10 +13,12 @@ export default function MainProductCard({ item }) {
 
       <Card.Body>
         <Card.Title className="card-title">{item.name}</Card.Title>
-        <Card.Text>{item.desc}</Card.Text>
-        <Card.Text>
+        <div className="card-container">
+          <Card.Text>{item.desc}</Card.Text>
+        </div>
+        <div>
           <b className="card-price">{formatPrice(item.price)}</b>
-        </Card.Text>
+        </div>
       </Card.Body>
     </Card>
   );

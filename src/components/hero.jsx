@@ -28,7 +28,7 @@ function AppHero() {
               <img
                 className="d-block w-100"
                 src={hero.image}
-                alt={"slide " + hero.id}
+                alt={"slide" + hero.id}
               />
             </Carousel.Item>
           );

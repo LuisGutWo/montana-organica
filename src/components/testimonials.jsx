@@ -8,8 +8,8 @@ function AppTestimonials() {
         <div className="title-holder">
           <h2>Conócenos un poco mas</h2>
           <div className="subtitle">aquí una mirada de nuestro concepto</div>
-          <VideoPlayer />
         </div>
+        <VideoPlayer className="testimonials-videoPlayer" />
       </Container>
     </section>
   );
