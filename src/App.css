@@ -358,17 +358,18 @@ textarea {
 .socials li {
   display: inline-block;
   vertical-align: top;
-  padding: 0 5px;
+  padding-top: 7rem;
 }
 
 .socials a {
-  width: 35px;
-  height: 35px;
+  width: 3rem;
+  height: 3rem;
   background: #fff;
   color: #009b73;
   border-radius: 50%;
   display: block;
   text-align: center;
+  font-size: 1.4rem;
   padding: 2px;
   transition: background 0.3s linear, color 0.3s linear;
   -webkit-transition: background 0.3s linear, color 0.3s linear;
@@ -392,8 +393,9 @@ textarea {
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 5%;
+  right: 0;
+  left: 5%;
   background: #009b73;
   border-radius: 3px;
   border: solid 2px #006e53;
@@ -572,6 +574,7 @@ textarea {
 
 .testimonials-block {
   overflow: hidden;
+  width: 100%;
   padding: 90px 0 70px;
   background-position: 50% 0;
   background-size: cover;
@@ -599,7 +602,6 @@ textarea {
   align-items: center;
   z-index: 1;
   margin: 0 auto;
-  max-width: 900px;
 }
 
 .testimonials-block .subtitle {
