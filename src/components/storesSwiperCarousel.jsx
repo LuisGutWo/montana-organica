@@ -123,9 +123,9 @@ const storesData = [
 const StoresSwipeCarousel = () => {
   return (
     <Swiper
-      data-aos="zoom-in"
+      data-aos="fade-in"
       data-aos-easing="ease-in-back"
-      data-aos-delay="300"
+      data-aos-delay="100"
       data-aos-offset="0"
       effect={"coverflow"}
       grabCursor={true}

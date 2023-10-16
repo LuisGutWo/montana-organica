@@ -22,7 +22,7 @@ function AppAbout() {
           <Col sm={6}>
             <Image
               data-aos="fade-right"
-              data-aos-offset="300"
+              data-aos-offset="200"
               data-aos-easing="ease-in-sine"
               src={img1}
             />

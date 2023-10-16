@@ -15,7 +15,7 @@ const HeaderOne = () => {
                     <i className="fa-regular fa-clock text-light"></i>
                   </div>
                   <div className="text-box">
-                    <p>Lun a Sab: 09:00 am to 08:00 pm</p>
+                    <p>Lun a Sab: 24 horas</p>
                   </div>
                 </div>
               </li>

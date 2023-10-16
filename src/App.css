@@ -1,5 +1,5 @@
 @import "animate.css";
-@import "loaders.css/src/animations/pacman.scss";
+@import "loaders.css/src/animations/ball-triangle-trace.scss";
 @import "transition-style";
 
 html {
@@ -20,7 +20,7 @@ html {
 
 body {
   color: #333;
-  background-image: linear-gradient(135deg, #fdfcfbce 0%, #e2d1c386 100%);
+  background-image: linear-gradient(135deg, #fdfcfb94 0%, #e2d1c358 100%);
   font: 16px/1.6 "Inter", sans-serif;
   min-width: 320px;
   -webkit-font-smoothing: antialiased;
@@ -292,7 +292,7 @@ textarea {
   padding: 0;
   color: #fff;
   text-align: center;
-  height: 20rem;
+  height: 100%;
 }
 
 #footer .copyright {
@@ -359,6 +359,7 @@ textarea {
   display: inline-block;
   vertical-align: top;
   padding-top: 7rem;
+  margin: 0 1rem;
 }
 
 .socials a {
@@ -383,7 +384,33 @@ textarea {
 .socials .fab {
   line-height: 2;
 }
+.img-thumbnail {
+  left: 0;
+  right: 0;
+  width: 35%;
+  margin: 1rem 0;
+}
+.footer-par {
+  text-align: justify !important ;
+  font-size: 0.9rem;
+}
+.copyright-container {
+  background-color: #333;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  height: 2rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: white;
+}
 
+/* Go to top button styles */
 .go-top {
   width: 50px;
   height: 50px;
@@ -455,6 +482,32 @@ textarea {
   margin: 0 0 30px;
 }
 
+/* Products section */
+
+.products-block div[class*="col"] {
+  margin: 0 0 50px;
+}
+
+.products-block .row:last-child {
+  margin: 0 -15px;
+}
+
+.products-block [class*="col-"]:hover .overlay {
+  top: 0;
+  opacity: 1;
+}
+.products-buttons-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2%;
+  padding: 1rem;
+}
+
+/* Main product card styles */
 .main-product-card {
   margin: 1em;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
@@ -485,9 +538,11 @@ textarea {
   margin-bottom: 1.5rem;
 }
 .card-price {
+  font-size: 105%;
   color: #19715bd2;
 }
 
+/* Stores carousel section */
 #stores .stores-block {
   width: fit-content;
   overflow: hidden;
@@ -507,67 +562,23 @@ textarea {
   height: 3rem;
   font-size: 1.5rem;
 }
-
-/* swiper carousel */
+/* swiper stores carousel */
 .swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding: 0;
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
   width: 25% !important;
-  height: 300px;
-  margin: 3rem 1rem;
+  height: 100%;
+  margin: 0 0 4rem 0;
 }
 
 .swiper-slide img {
   display: block;
-  width: 100%;
-}
-
-/* Products section */
-
-.teams-block div[class*="col"] {
-  margin: 0 0 50px;
-}
-
-.teams-block .row:last-child {
-  margin: 0 -15px;
-}
-
-.teams-block [class*="col-"]:hover .overlay {
-  top: 0;
-  opacity: 1;
-}
-.products-buttons-section {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2%;
-  padding: 1rem;
-}
-
-.products-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5%;
-
-  .products-column {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 18vw;
-  }
+  width: 70%;
+  padding: 3rem;
 }
 
 /* Testimonials section */
@@ -609,28 +620,9 @@ textarea {
   margin-bottom: 3rem;
 }
 
+/* /// Blog section styles /// */
 .blog-block {
   background: #f2f2f2;
-}
-
-.blog-block.content-block .holder:hover {
-  box-shadow: none;
-}
-
-.blog-block.content-block .holder:hover .image img {
-  transform: none;
-}
-
-.blog-block.content-block .comment-block ul {
-  margin: 0;
-}
-
-.blog-block.content-block .comment-block li {
-  padding: 0;
-}
-
-.blog-block.content-block .comment-block li:before {
-  display: none;
 }
 
 .blog-block .row {
@@ -701,9 +693,38 @@ textarea {
   color: #f64b4b;
 }
 
+/* Contact section styles */
 .contact-block {
+  overflow: hidden;
+  width: 100%;
+  padding: 90px 0 70px;
+  background-position: 50% 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("./assets/images/bg-testimonial.jpg");
   position: relative;
-  background-color: #009b742f;
+  color: #fff;
+  position: relative;
+  color: #f3f3f3;
+  border: none;
+}
+.contact-block:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.contact-block .container-fluid {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin: 0 auto;
 }
 
 .contact-block .row {
@@ -719,34 +740,39 @@ textarea {
 }
 
 .contact-block iframe {
+  position: relative;
   border: 0;
   width: 100%;
   height: 450px;
 }
 
 .contact-block .contact-info {
-  padding: 50px 40px 0;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
   position: relative;
   z-index: 1;
   font-size: 100%;
-  border-radius: 5px;
+  width: 100%;
 }
 
 .contact-block .contact-info ul {
   text-align: center;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .contact-block .contact-info li {
   display: inline-block;
   vertical-align: top;
-  width: 32%;
+  width: 100%;
+  margin: 0;
 }
 
 .contact-block .contact-info .fas {
   display: block;
   font-size: 30px;
-  margin: 0 0 15px;
-  color: #009b73;
+  margin: 1rem;
+  color: #2ba486;
 }
 
 @media (width <=1025px) {
@@ -820,11 +846,12 @@ textarea {
   }
   .products-buttons-section {
     flex-wrap: nowrap;
-    gap: 2%;
-    padding: 1rem;
+    overflow-x: scroll;
+    gap: 3px;
+    padding: 0;
   }
   .btn.btn-primary {
-    padding: 7px 16px;
+    padding: 5px 10px;
   }
 }
 

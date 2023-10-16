@@ -14,7 +14,7 @@ import AppBlog from "./components/blog";
 import AppContact from "./components/contact";
 import AppFooter from "./components/footer";
 import "transition-style";
-import Loader from "react-loaders";
+import "animate.css";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -34,8 +34,8 @@ function App() {
 
   return (
     <div className="App">
-      <HeaderOne />
       <header id="header" className={`${sticky ? "sticky" : ""}`}>
+        <HeaderOne />
         <AppHeader />
       </header>
       <main>
@@ -50,7 +50,6 @@ function App() {
       <footer id="footer">
         <AppFooter />
       </footer>
-      <Loader type="ball-triangle" active={true} color="#00BFFF" />
     </div>
   );
 }

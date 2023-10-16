@@ -46,7 +46,7 @@ function AppProducts() {
 
   return (
     <>
-      <section id="products" className="block teams-block">
+      <section id="products" className="block products-block">
         <Container fluid>
           <div className="title-holder">
             <h2 data-aos="fade-right">Nuestros Productos</h2>

@@ -30,7 +30,7 @@ function AppHeader() {
             <Nav.Link href="#about">Quienes somos</Nav.Link>
             <Nav.Link href="#products">Productos</Nav.Link>
             <Nav.Link href="#stores">Tiendas</Nav.Link>
-            <Nav.Link href="#testimonials">Testimonios</Nav.Link>
+            <Nav.Link href="#testimonials">Video</Nav.Link>
             <Nav.Link href="#blog">Blog</Nav.Link>
             <Nav.Link href="#contact">Contacto</Nav.Link>
           </Nav>
