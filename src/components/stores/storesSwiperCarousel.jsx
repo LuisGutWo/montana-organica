@@ -7,21 +7,21 @@ import "swiper/css/pagination";
 
 import { EffectCoverflow, Pagination } from "swiper/modules";
 
-import StoreImg1 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-2.png";
-import StoreImg2 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-3.png";
-import StoreImg3 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-4.png";
-import StoreImg4 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-5.png";
-import StoreImg5 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-6.png";
-import StoreImg6 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-7.png";
-import StoreImg7 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-8.png";
-import StoreImg8 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-9.png";
-import StoreImg9 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-10.png";
-import StoreImg10 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-11.png";
-import StoreImg11 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-12.png";
-import StoreImg12 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-13.png";
-import StoreImg13 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-14.png";
-import StoreImg14 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-15.png";
-import StoreImg15 from "../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia.png";
+import StoreImg1 from "../../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-2.png";
+import StoreImg2 from "../../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-3.png";
+import StoreImg3 from "../../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-4.png";
+import StoreImg4 from "../../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-5.png";
+import StoreImg5 from "../../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-6.png";
+import StoreImg6 from "../../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-7.png";
+import StoreImg7 from "../../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-8.png";
+import StoreImg8 from "../../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-9.png";
+import StoreImg9 from "../../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-10.png";
+import StoreImg10 from "../../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-11.png";
+import StoreImg11 from "../../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-12.png";
+import StoreImg12 from "../../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-13.png";
+import StoreImg13 from "../../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-14.png";
+import StoreImg14 from "../../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia-15.png";
+import StoreImg15 from "../../assets/images/Marcas-MO_Mesa-de-trabajo-1-copia.png";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -146,14 +146,14 @@ const StoresSwipeCarousel = () => {
       {storesData.map((stores, index) => {
         return (
           <SwiperSlide key={index}>
-            <div className="stores-wrapper">
+            <section className="stores-wrapper">
               <a href={stores.link} target="_blank" rel="noreferrer noopener">
                 <Image src={stores.image} />
                 <div className="label text-center">
                   <div className="store-title">{stores.title}</div>
                 </div>
               </a>
-            </div>
+            </section>
           </SwiperSlide>
         );
       })}

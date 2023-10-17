@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { formatPrice } from "./formatPrice";
+import { formatPrice } from "../formatPrice";
 
 import AOS from "aos";
 import "aos/dist/aos.css";

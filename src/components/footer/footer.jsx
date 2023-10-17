@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import ReactWhatsappButton from "react-whatsapp-button";
 import Container from "react-bootstrap/Container";
-import shape1 from "../assets/images/footer-v1-shape1.png";
-import shape2 from "../assets/images/footer-v1-shape2.png";
-import shape3 from "../assets/images/footer-v1-shape3.png";
-import LogoWhite from "../assets/images/montaña organica-125x125.png";
-import 'animate.css';
+import shape1 from "../../assets/images/footer-v1-shape1.png";
+import shape2 from "../../assets/images/footer-v1-shape2.png";
+import LogoWhite from "../../assets/images/montaña organica-125x125.png";
+import "animate.css";
+import "../footer/footerStyles.css";
 
 function AppFooter() {
   const [showTopBtn, setShowTopBtn] = useState(false);
@@ -30,12 +30,6 @@ function AppFooter() {
   return (
     <>
       <section className="footer-one">
-        <div
-          className="footer-one__bg"
-          style={{
-            backgroundImage: { shape3 },
-          }}
-        ></div>
         <div className="shape1 float-bob-y">
           <img src={shape1} alt="#" />
         </div>
@@ -43,10 +37,14 @@ function AppFooter() {
           <img src={shape2} alt="#" />
         </div>
         <Container fluid className="d-flex flex-row m-2 p-3">
-          <section className="row justify-content-center align-items-center">
+          <section className="row justify-content-center align-items-center ps-5">
             <div className="col-lg-6 col-md-8 text-start">
-              <img src={LogoWhite} className="img-thumbnail animate__animated animate__pulse animate__infinite animate__slow" alt="" />
-              <h5>Somos Montaña Organica</h5>
+              <img
+                src={LogoWhite}
+                className="img-thumbnail animate__animated animate__pulse animate__infinite animate__slow"
+                alt=""
+              />
+              <h4>Somos Montaña Organica</h4>
               <p className="footer-par">
                 Nos dedicamos a crear super alimentos de consumo diario para
                 toda la familia y poder mantener una alimentación saludable para

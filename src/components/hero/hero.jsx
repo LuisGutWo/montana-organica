@@ -1,7 +1,8 @@
 import Carousel from "react-bootstrap/Carousel";
-import ImgHero1 from "../assets/images/Banner-Rose-tea_Mesa-de-trabajo-1-copia.png";
-import ImgHero2 from "../assets/images/Banner-Rose-tea_Mesa-de-trabajo-1.png";
-import ImgHero3 from "../assets/images/Banner-rose-tea.png";
+import ImgHero1 from "../../assets/images/Banner-Rose-tea_Mesa-de-trabajo-1-copia.png";
+import ImgHero2 from "../../assets/images/Banner-Rose-tea_Mesa-de-trabajo-1.png";
+import ImgHero3 from "../../assets/images/Banner-rose-tea.png";
+import "../hero/heroStyles.css"
 
 var heroData = [
   {

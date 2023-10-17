@@ -3,9 +3,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 
-import BlogImg1 from "../assets/images/blogImg1.jpg";
-import BlogImg2 from "../assets/images/blogImg2.png";
-import BlogImg3 from "../assets/images/blogImg3.jpg";
+import BlogImg1 from "../../assets/images/blogImg1.jpg";
+import BlogImg2 from "../../assets/images/blogImg2.png";
+import BlogImg3 from "../../assets/images/blogImg3.jpg";
+
+import "../blog/blogStyles.css"
 
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles

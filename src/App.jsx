@@ -1,21 +1,19 @@
 import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-// import WOW from "wowjs";
-
-import AppHeader from "./components/header/header";
-import HeaderOne from "./components/header/headerOne";
-import AppHero from "./components/hero";
-import AppAbout from "./components/about";
-import AppStores from "./components/stores";
-import AppProducts from "./components/products";
-import AppTestimonials from "./components/testimonials";
-import AppBlog from "./components/blog";
-import AppContact from "./components/contact";
-import AppFooter from "./components/footer";
 import "transition-style";
 import "animate.css";
 
+import AppHeader from "./components/header/header";
+import HeaderOne from "./components/header/headerOne";
+import AppHero from "./components/hero/hero";
+import AppAbout from "./components/about";
+import AppStores from "./components/stores/stores";
+import AppProducts from "./components/products/products";
+import AppTestimonials from "./components/testimonials/testimonials";
+import AppBlog from "./components/blog/blog";
+import AppContact from "./components/contact/contact";
+import AppFooter from "./components/footer/footer";
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init();
@@ -34,8 +32,8 @@ function App() {
 
   return (
     <div className="App">
+      <HeaderOne />
       <header id="header" className={`${sticky ? "sticky" : ""}`}>
-        <HeaderOne />
         <AppHeader />
       </header>
       <main>

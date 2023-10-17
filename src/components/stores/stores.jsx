@@ -1,5 +1,6 @@
 import Container from "react-bootstrap/Container";
-import StoresSwipeCarousel from "../components/storesSwiperCarousel";
+import StoresSwipeCarousel from "./storesSwiperCarousel";
+import "../stores/storesStyles.css"
 
 function AppStores() {
   return (

@@ -4,6 +4,7 @@ import { Button, NavLink, Navbar } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import MainProductCard from "./MainProductCard";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import "../products/productsStyles.css"
 
 import AOS from "aos";
 import "aos/dist/aos.css";

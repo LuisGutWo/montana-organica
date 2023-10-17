@@ -1,0 +1,53 @@
+/* Stores carousel section */
+.swiper {
+  padding: 0;
+}
+
+.stores-wrapper {
+  box-shadow: rgba(0, 0, 0, 0.358) 0px 25px 50px -12px;
+}
+.store-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #009b73;
+  background-color: #4d4d4d3d;
+  font-variant: small-caps;
+  font-weight: 400;
+  height: 3rem;
+  font-size: 1.5rem;
+}
+/* swiper stores carousel */
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 25% !important;
+  height: 100%;
+  margin: 0 0 4rem 0;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 70%;
+  padding: 3rem;
+}
+
+@media (width <=1200px) {
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  .store-title {
+    height: 2rem;
+    font-size: 0.7rem;
+  }
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 30% !important;
+    height: 100%;
+    margin: 0 0 4rem 0;
+  }
+}
