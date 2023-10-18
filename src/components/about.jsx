@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
 
 import img1 from "../assets/images/nosotros-1-1024x682.jpg";
-import img2 from "../assets/images/iconos_vegan_gluten_non.png";
+import img2 from "../assets/images/iconos_vegan_gluten_non_white.png";
 
 import AOS from "aos";
 import "aos/dist/aos.css";

@@ -8,6 +8,7 @@
   background-image: url("../../assets/images/bg-testimonial.jpg");
   position: relative;
   color: #fff;
+  overflow-x: hidden;
 }
 
 .testimonials-block:before {
@@ -27,17 +28,18 @@
   z-index: 1;
   margin: 0 auto;
   max-width: 56.2rem;
+
+}
+.testimonials-videoPlayer {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .testimonials-block .subtitle {
   color: #cccccc;
   margin-bottom: 3rem;
-}
-.testimonials-videoPlayer {
-  margin-top: 0;
-  padding-left: 8rem;
-
-
 }
 
 @media (width <=1200px) {

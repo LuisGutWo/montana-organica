@@ -9,19 +9,20 @@ html {
 }
 
 * {
-  max-height: 1000000px;
   margin: 0;
   padding: 0;
+
 }
 
 body {
   color: #333;
   background-image: linear-gradient(135deg, #fdfcfb94 0%, #e2d1c358 100%);
   font: 16px/1.6 "Muli", sans-serif;
-  min-width: 320px;
+  max-width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
+  height: 200vh;
 }
 
 img {
@@ -96,15 +97,53 @@ ul,
   overflow: hidden;
 }
 
-#wrapper {
+.about-block {
   overflow: hidden;
   width: 100%;
+  padding: 90px 0 70px;
+  background-position: 50% 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("./assets/images/bg-testimonial.jpg");
+  position: relative;
+  color: #fff;
+  position: relative;
+  color: #f3f3f3;
+  border: none;
+}
+.about-block:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.about-block .container-fluid {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin: 0 auto;
+  font-size: 1.2rem;
+
+  & img {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+#wrapper {
+  overflow: hidden;
   position: relative;
 }
 
 .container-fluid {
   margin: 0 auto;
-  max-width: 75rem;
+  max-width: 100%;
 }
 
 .content-block ul {
@@ -156,13 +195,6 @@ ul,
 .btn.btn-primary .fas {
   margin: 0 0 0 6px;
   font-size: 15px;
-}
-.sticky {
-  position: sticky !important;
-  top: 0;
-  z-index: 9999;
-  transition: ease-in-out 3s all;
-  transition-delay: 5s;
 }
 
 input[type="text"],
@@ -280,8 +312,11 @@ textarea {
 
 @media (width <=1023px) {
   body {
+    height: 100%;
+    width: 100%;
     font-size: 15px;
     line-height: 24px;
+    max-width: 100%;
   }
 
   h1 {
@@ -324,6 +359,9 @@ textarea {
 }
 
 @media (width <=767px) {
+  #header {
+    position: sticky;
+  }
   h2 {
     font-size: 20px;
   }

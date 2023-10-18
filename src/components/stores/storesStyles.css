@@ -1,4 +1,10 @@
 /* Stores carousel section */
+.stores-block {
+  margin: auto;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .swiper {
   padding: 0;
 }

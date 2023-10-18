@@ -11,7 +11,7 @@ function AppTestimonials() {
           <div className="subtitle">aquí una mirada de nuestro concepto</div>
         </section>
         <section className="testimonials-videoPlayer">
-          <YouTube videoId="AhvNSJ7eGro" autoplay={true} />
+          <YouTube videoId="AhvNSJ7eGro" autoplay={true} fluid/>
         </section>
       </Container>
     </section>

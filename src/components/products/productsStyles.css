@@ -1,9 +1,15 @@
 /* Products section */
 
 .products-block {
-  margin: auto;
-  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  margin-top: 4rem;
 
+  .title-holder .subtitle {
+    margin-bottom: 2rem;
+  }
 }
 
 .products-block div[class*="col"] {
@@ -72,7 +78,6 @@
       font-weight: bold;
       margin-bottom: 1.8rem;
     }
-
   }
   .main-product-card {
     margin: 1em;

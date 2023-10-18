@@ -32,8 +32,8 @@ function App() {
 
   return (
     <div className="App">
-      <HeaderOne />
       <header id="header" className={`${sticky ? "sticky" : ""}`}>
+        <HeaderOne />
         <AppHeader />
       </header>
       <main>
