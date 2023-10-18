@@ -1,5 +1,5 @@
 import Container from "react-bootstrap/Container";
-import VideoPlayer from "./VideoPlayer";
+import YouTube from "react-youtube";
 import "../../components/testimonials/testimonialsStyles.css";
 
 function AppTestimonials() {
@@ -11,7 +11,7 @@ function AppTestimonials() {
           <div className="subtitle">aquí una mirada de nuestro concepto</div>
         </section>
         <section className="testimonials-videoPlayer">
-          <VideoPlayer />
+          <YouTube videoId="AhvNSJ7eGro" autoplay={true} />
         </section>
       </Container>
     </section>
