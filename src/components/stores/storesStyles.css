@@ -1,8 +1,14 @@
 /* Stores carousel section */
 .stores-block {
   margin: auto;
-  width: 100%;
+  background-color: #009b74;
+  border: none;
   overflow-x: hidden;
+
+  .title-holder .subtitle {
+    color: rgba(13, 13, 13, 0.55);
+
+  }
 }
 
 .swiper {
@@ -16,7 +22,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #009b73;
+  color: rgba(7, 7, 7, 0.95);
   background-color: #4d4d4d3d;
   font-variant: small-caps;
   font-weight: 400;
@@ -52,7 +58,7 @@
   .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 30% !important;
+    width: 40% !important;
     height: 100%;
     margin: 0 0 4rem 0;
   }

@@ -11,18 +11,16 @@ html {
 * {
   margin: 0;
   padding: 0;
-
 }
 
 body {
   color: #333;
-  background-image: linear-gradient(135deg, #fdfcfb94 0%, #e2d1c358 100%);
+  background-image: #ffffff;
   font: 16px/1.6 "Muli", sans-serif;
-  max-width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
-  height: 200vh;
+  height: 100vh;
 }
 
 img {
@@ -99,7 +97,6 @@ ul,
 
 .about-block {
   overflow: hidden;
-  width: 100%;
   padding: 90px 0 70px;
   background-position: 50% 0;
   background-size: cover;
@@ -143,7 +140,6 @@ ul,
 
 .container-fluid {
   margin: 0 auto;
-  max-width: 100%;
 }
 
 .content-block ul {
@@ -311,13 +307,13 @@ textarea {
 }
 
 @media (width <=1023px) {
-  body {
+  /* body {
     height: 100%;
-    width: 100%;
+    width: 100vw;
     font-size: 15px;
     line-height: 24px;
     max-width: 100%;
-  }
+  } */
 
   h1 {
     font-size: 34px;
@@ -359,9 +355,6 @@ textarea {
 }
 
 @media (width <=767px) {
-  #header {
-    position: sticky;
-  }
   h2 {
     font-size: 20px;
   }
@@ -385,7 +378,7 @@ textarea {
   }
 
   .block {
-    padding: 40px 0 0 0;
+    padding: 0;
   }
 
   .hero-block .carousel-caption {
@@ -406,17 +399,5 @@ textarea {
     p {
       margin-top: 2rem;
     }
-  }
-
-  .blog-block {
-    padding: 40px 0 20px;
-  }
-
-  .blog-block [class*="col-"] {
-    padding-bottom: 20px;
-  }
-
-  .blog-block .row {
-    margin-bottom: 0;
   }
 }

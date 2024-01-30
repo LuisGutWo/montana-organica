@@ -7,7 +7,7 @@ import AppTestimonials from "../components/testimonials/testimonials";
 import AppBlog from "../components/blog/blog";
 import AppContact from "../components/contact/contact";
 
-const Home = () => {
+const AppHome = () => {
   return (
     <>
       <AppHero />
@@ -21,4 +21,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default AppHome;

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ReactWhatsappButton from "react-whatsapp-button";
 import Container from "react-bootstrap/Container";
 import shape1 from "../../assets/images/footer-v1-shape1.png";
 import shape2 from "../../assets/images/footer-v1-shape2.png";
@@ -73,11 +72,7 @@ function AppFooter() {
             </ul>
           </section>
         </Container>
-        <ReactWhatsappButton
-          countryCode="51"
-          phoneNumber="960147597"
-          animated
-        />
+
         {showTopBtn && <div className="go-top" onClick={goTop}></div>}
       </section>
 

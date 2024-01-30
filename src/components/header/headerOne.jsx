@@ -1,4 +1,3 @@
-import React from "react";
 import "../header/headerStyles.css"
 import { Container } from "react-bootstrap";
 

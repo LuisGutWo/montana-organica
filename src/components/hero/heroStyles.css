@@ -2,8 +2,6 @@
 .block {
   padding: 70px 0;
   border-bottom: 1px solid #e6e6e6;
-  width: auto;
-  max-width: 100%;
 }
 
 .hero-block {
@@ -35,10 +33,10 @@
   .hero-block .carousel-item img {
     height: 10rem;
   }
-  .hero-block {
+  /* .hero-block {
     position: relative;
 
-  }
+  } */
 
 
 }

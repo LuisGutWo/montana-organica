@@ -70,3 +70,17 @@
 .blog-block .meta .category a:hover {
   color: #f64b4b;
 }
+
+@media (width <=1200px) {
+  .blog-block {
+    padding: 40px 0 20px;
+  }
+
+  .blog-block [class*="col-"] {
+    padding-bottom: 20px;
+  }
+
+  .blog-block .row {
+    margin-bottom: 0;
+  }
+}

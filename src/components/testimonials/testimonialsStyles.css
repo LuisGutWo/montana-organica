@@ -8,7 +8,6 @@
   background-image: url("../../assets/images/bg-testimonial.jpg");
   position: relative;
   color: #fff;
-  overflow-x: hidden;
 }
 
 .testimonials-block:before {
@@ -26,12 +25,9 @@
   display: grid;
   align-content: center;
   z-index: 1;
-  margin: 0 auto;
-  max-width: 56.2rem;
-
 }
+
 .testimonials-videoPlayer {
-  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,19 +44,17 @@
     width: 100%;
     z-index: 1;
     margin: 0 auto;
-
-    .testimonials-videoPlayer {
-      overflow: hidden;
-      height: 40vh;
-      max-height: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      video {
-        max-width: none !important;
-        min-width: 100%;
-        object-fit: fill !important;
-      }
+  }
+  .testimonials-videoPlayer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    video {
+      object-fit: cover;
+      background-size: 60%;
+      width: 20rem;
     }
   }
 }
